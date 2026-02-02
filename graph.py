@@ -1,6 +1,10 @@
 
 from typing import TypedDict, Annotated
-from langgraph.graph import StateGraph, START, END
+from langgraph.graph import StateGraph
+
+# Define constants
+END = "__end__"
+START = "__start__"
 from langgraph.graph.message import add_messages
 from langchain_core.messages import HumanMessage, AIMessage
 from agents import analyzer_agent, validator_agent, rewriter_agent
